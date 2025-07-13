@@ -1,0 +1,52 @@
+
+
+@startuml DBER Template
+
+'groups two or more similar arrows together
+skinparam groupInheritance 2
+
+'Entities
+entity User {
+* UserID : int <<PK>> <<generated>>
+--
+* First_Name : varchar
+* Last_Name : varchar
+* Phone_Number : varchar
+* Email_Address : varchar
+* Password : varchar
+}
+
+entity Account {
+* AccountID : int <<PK>> <<generated>>
+--
+* UserID : int <<FK>>
+* TransactionID : int <<FK>>
+* Balance : decimal 
+
+}
+
+entity Transaction {
+* TransactionID : int <<PK>> <<generated>>
+--
+* UserID : int <<FK>>
+* AccountID
+}
+
+entity Category {
+* CategoryID : int <<PK>> <<generated>>
+--
+* Category_Name : varchar
+}
+'Relationship-Based Entities
+
+
+'Entity-Entity Arrows 
+'Including: Composition, Aggregation, and Extension/Inheritance [superclass notation])
+
+
+
+'Entity-Relationship Arrows 
+'Entity --> Relationship
+
+
+@enduml
