@@ -1,0 +1,10 @@
+@startuml
+object List of Views
+}
+Welcome
+Create Tabia Account (Might be replaced with Google/Apple Sign in)
+Habit Dashboard
+Create Habit
+Edit Habit
+}
+@enduml
