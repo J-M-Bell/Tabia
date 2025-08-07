@@ -1,0 +1,15 @@
+Habit Tracker Use Case 'Tabia'
+
+@startuml 
+left to right direction
+actor "End User" as user
+rectangle Habit Tracker {
+	usecase "Create Habit" as UC1
+	usecase "View Habit Streaks" as UC2
+	usecase "Change Habit" as UC3
+}
+
+user--> UC1
+user--> UC2
+user--> UC3
+@enduml
